@@ -165,12 +165,16 @@ gaps inner  20
 exec --no-startup-id start-pulseaudio-x11
 exec --no-startup-id polybar --config=/home/nmcdaniel/.config/polybar/lake.ini lake
 exec --no-startup-id nitrogen --restore
+exec --no-startup-id compton
+
 bindsym $mod+y exec --no-startup-id rofi -show drun
 
 mode "Press enter to exit i3, p to shutdown, r to restart, or Esc to cancel." {
-	bindsym Enter exec i3-msg exit
+	bindsym Return exec i3-msg exit
 	bindsym p exec poweroff
 	bindsym r exec reboot
 	bindsym Escape mode "default"
 }
 bindsym $mod+Shift+e mode "Press enter to exit i3, p to shutdown, r to restart, or Esc to cancel."
+
+bindsym $mod+x exec import ~/Pictures/1.png
